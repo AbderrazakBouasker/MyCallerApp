@@ -55,6 +55,7 @@ public class Home extends AppCompatActivity {
                 editor.putString("varstayconnected", "notstayconnected");
                 editor.apply();
                 Intent i = new Intent(Home.this, MainActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
             }
         });
